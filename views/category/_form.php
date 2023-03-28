@@ -7,34 +7,17 @@ use kartik\bs5dropdown\ButtonDropdown;
 /** @var yii\web\View $this */
 /** @var app\models\Category $model */
 /** @var yii\widgets\ActiveForm $form */
-// echo Html::tag('span', 'Dropdown Span', [
-//     'id' => 'dropdownMenuButton',
-//     'class' => 'btn btn-link text-info dropdown-toggle',
-//     'data-bs-toggle' => 'dropdown',
-//     'aria-haspopup' => 'false',
-//     'aria-expanded' => 'false'
-//  ]);
-// echo Dropdown::widget([
-//     'items' => [
-//         ['label' => 'Section 1', 'url' => '/'],
-//         ['label' => 'Section 2', 'url' => '#'],
-//         [
-//              'label' => 'Section 3', 
-//              'items' => [
-//                  ['label' => 'Section 3.1', 'url' => '/'],
-//                  ['label' => 'Section 3.2', 'url' => '#'],
-//                  [
-//                      'label' => 'Section 3.3', 
-//                      'items' => [
-//                          ['label' => "", 'url' => '/'],
-//                          ['label' => 'Section 3.3.2', 'url' => '#'],
-//                      ],
-//                  ],
-//              ],
-//          ],
-//     ],
-//     'options' => ['aria-labelledby' => 'dropdownMenuButton']
-// ]);
+echo Html::tag('span', 'Dropdown Span', [
+    'id' => 'dropdownMenuButton',
+    'class' => 'btn btn-link text-info dropdown-toggle',
+    'data-bs-toggle' => 'dropdown',
+    'aria-haspopup' => 'true',
+    'aria-expanded' => 'true'
+ ]);
+echo Dropdown::widget([
+    'items' => $model -> items,
+    'options' => ['aria-labelledby' => 'dropdownMenuButton']
+]);
 
 echo ButtonDropdown::widget([
     'label' => 'Button Dropdown', 
