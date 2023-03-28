@@ -17,6 +17,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
+    <?= $form->field($model, 'parent_node') ?>
+
     <?= $form->field($model, 'title') ?>
 
     <div class="form-group">

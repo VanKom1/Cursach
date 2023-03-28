@@ -30,6 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
+            'parent_node',
             'title',
             [
                 'class' => ActionColumn::className(),
@@ -40,5 +41,6 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 
+    
 
 </div>
